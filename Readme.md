@@ -64,7 +64,7 @@ uvicorn app.main:app --reload
 
 ## Deployment
 
-You can check out the application at [LINK][https://library-management-system-cu0l.onrender.com/docs]
+You can check out the application at [LINK](https://library-management-system-cu0l.onrender.com/docs)
 
 ## Contributing
 
