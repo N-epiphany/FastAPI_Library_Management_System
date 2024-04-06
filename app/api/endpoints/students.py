@@ -5,12 +5,12 @@ from bson.objectid import ObjectId
 
 router = APIRouter()
 
-@router.post("/students", status_code=201)
+@router.post("/", status_code=201)
 async def create_student(student: Student):
     inserted_student = students_collection.insert_one(student.dict())
     return {"id": str(inserted_student.inserted_id)}
 
-@router.get("/students", status_code=200)
+@router.get("/", status_code=200)
 async def list_students(country: str = None, age: int = None):
     filters = {}
     if country:
@@ -20,7 +20,7 @@ async def list_students(country: str = None, age: int = None):
     result = list(students_collection.find(filters, {"_id": 0}))
     return {"data": result}
 
-@router.get("/students/{id}", status_code=200)
+@router.get("/{id}", status_code=200)
 async def get_student(id: str):
     student = students_collection.find_one({"_id": ObjectId(id)}, {"_id": 0})
     if student:
@@ -28,7 +28,7 @@ async def get_student(id: str):
     else:
         raise HTTPException(status_code=404, detail="Student not found")
 
-@router.patch("/students/{id}", status_code=204)
+@router.patch("/{id}", status_code=204)
 async def update_student(id: str, student: Student):
     result = students_collection.update_one(
         {"_id": ObjectId(id)},
@@ -38,7 +38,7 @@ async def update_student(id: str, student: Student):
         raise HTTPException(status_code=404, detail="Student not found")
     return
 
-@router.delete("/students/{id}", status_code=200)
+@router.delete("/{id}", status_code=200)
 async def delete_student(id: str):
     result = students_collection.delete_one({"_id": ObjectId(id)})
     if result.deleted_count == 0:

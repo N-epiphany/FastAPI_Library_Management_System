@@ -64,7 +64,7 @@ uvicorn app.main:app --reload
 
 ## Deployment
 
-You can deploy this application to various cloud platforms like AWS, GCP, or Heroku. Make sure to update the MongoDB connection string accordingly.
+You can check out the application at [LINK][https://library-management-system-cu0l.onrender.com/docs]
 
 ## Contributing
 
@@ -73,3 +73,5 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+![Our Application](Image URL)
