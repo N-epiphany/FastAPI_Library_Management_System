@@ -1,4 +1,3 @@
-````markdown
 # FastAPI Library Management System
 
 This project implements a backend system for a Library Management System using FastAPI and MongoDB. It provides a set of APIs for creating, listing, updating, and deleting student records in the system.
@@ -32,7 +31,6 @@ To run this project locally, you need to have the following installed:
 ```bash
 git clone https://github.com/your-username/library-management-system.git
 ```
-````
 
 2. Navigate to the project directory:
 
@@ -75,7 +73,3 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-```
-
-```
